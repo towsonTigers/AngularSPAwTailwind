@@ -1,0 +1,54 @@
+<aside 
+  class="sidebar bg-gray-900 text-white h-full transition-all duration-300"
+  [class.w-20]="collapsed"
+  [class.w-64]="!collapsed"
+>
+
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 border-b border-gray-700">
+    <span *ngIf="!collapsed" class="font-bold">LOGO</span>
+
+    <button (click)="toggleSidebar()" class="text-xl">
+      <span class="material-symbols-rounded">chevron_left</span>
+    </button>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="p-2 space-y-2">
+
+    <div *ngFor="let item of menu">
+
+      <!-- Parent Item -->
+      <div 
+        class="flex items-center justify-between p-2 rounded cursor-pointer hover:bg-gray-700"
+        (click)="item.children ? toggleDropdown(item) : null"
+      >
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-rounded">{{item.icon}}</span>
+          <span *ngIf="!collapsed">{{item.label}}</span>
+        </div>
+
+        <span *ngIf="item.children && !collapsed"
+              class="material-symbols-rounded transition-transform"
+              [class.rotate-180]="item.open">
+          keyboard_arrow_down
+        </span>
+      </div>
+
+      <!-- Dropdown -->
+      <div 
+        *ngIf="item.children && item.open && !collapsed"
+        class="ml-6 mt-1 space-y-1"
+      >
+        <div 
+          *ngFor="let child of item.children"
+          class="p-2 text-sm rounded hover:bg-gray-700 cursor-pointer"
+        >
+          {{child}}
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+</aside>
