@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-header-bg: #ffffff;
+  --color-header-bg: #9D4EDD;  /* //#B57EDC; //#9370DB; //#a448ff; */
   --color-header-text: #111111;
 
   --color-body-bg: #f5f5f5;
@@ -11,7 +11,7 @@
 }
 
 html.dark {
-  --color-header-bg: #1f2937;   /* gray-800 */
+  --color-header-bg: #2D0A52;   /* //#3A0CA3;   //#4B0082;  */
   --color-header-text: #ffffff;
 
   --color-body-bg: #111827;     /* gray-900 */
