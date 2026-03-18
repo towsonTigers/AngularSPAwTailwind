@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   standalone: true,
   template: `
-    <header class="bg-gray-800 text-white px-6 py-4 text-2xl font-bold shadow">
+    <header class="bg-(--color-header-bg)
+         text-(--color-header-text) px-6 py-4 text-2xl font-bold shadow">
       HERMES
     </header>
   `

@@ -1,12 +1,14 @@
 <aside 
-  class="sidebar bg-gray-900 dark:bg-amber-50 text-white h-full transition-all duration-300"
+  class="bg-(--color-header-bg)
+         text-(--color-header-text) sidebar h-full transition-all duration-300"
   [class.w-20]="collapsed"
   [class.w-64]="!collapsed"
 >
 
   <!-- Header -->
   <header class="flex items-center justify-between p-4 border-b border-gray-700">
-    <span *ngIf="!collapsed" class="font-bold">LOGO</span>
+    <span *ngIf="!collapsed" class="bg-(--color-header-bg)
+         text-(--color-header-text) font-bold">LOGO</span>
 
     <button (click)="toggleSidebar()" class="text-xl">
       <span class="material-symbols-rounded">chevron_left</span>

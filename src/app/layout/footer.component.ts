@@ -6,7 +6,8 @@ import { ThemeService } from '../services/theme.service';
   selector: 'app-footer',
   standalone: true,
   template: `
-    <footer class="bg-gray-800 text-white text-center py-3 text-sm">
+    <footer class="bg-(--color-header-bg)
+         text-(--color-header-text) text-center py-3 text-sm">
       Version 1.0.0
 
       <button (click)="toggleTheme()">

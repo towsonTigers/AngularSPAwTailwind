@@ -1,12 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'tailwindcss';
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
-/* Required for dark mode */
 :root {
-  color-scheme: light;
+  --color-header-bg: #ffffff;
+  --color-header-text: #111111;
+
+  --color-body-bg: #f5f5f5;
+  --color-body-text: #222222;
 }
 
-.dark {
-  color-scheme: dark;
+html.dark {
+  --color-header-bg: #1f2937;   /* gray-800 */
+  --color-header-text: #ffffff;
+
+  --color-body-bg: #111827;     /* gray-900 */
+  --color-body-text: #e5e7eb;   /* gray-200 */
 }
